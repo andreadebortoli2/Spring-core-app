@@ -42,6 +42,7 @@ public class App {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         Developer dev1 = context.getBean("developer", Developer.class);
+        System.out.println("Developer: " + dev1.getId());
         dev1.code();
 
         Desktop desktop1 = context.getBean(Desktop.class);

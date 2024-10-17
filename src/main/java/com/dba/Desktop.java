@@ -1,5 +1,8 @@
 package com.dba;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Desktop implements Computer {
 
     public Desktop() {
@@ -8,7 +11,7 @@ public class Desktop implements Computer {
 
     @Override
     public void compile() {
-        System.out.println("computer compile");
+        System.out.println("desktop compile");
     }
 
 }

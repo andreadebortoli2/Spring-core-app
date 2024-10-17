@@ -1,5 +1,12 @@
 package com.dba;
 
+// import org.springframework.context.annotation.Scope;
+// import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+// @Primary // keyword used instead of qualifier
+// @Scope("prototype")
 public class Laptop implements Computer {
 
     public int ram;

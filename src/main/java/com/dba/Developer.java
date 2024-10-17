@@ -1,15 +1,24 @@
 package com.dba;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 // import java.beans.ConstructorProperties;
 
+@Component
 public class Developer {
 
+    @Value("1")
     private int id;
     // private Laptop laptop = new Laptop();
+    // @Autowired // field injection ***
+    // @Qualifier("laptop")
     private Computer computer;
 
     // @ConstructorProperties({ "id", "computer" })
-    // public Developer(int id, Computer computer) {
+    // public Developer(int id, Computer computer) { //constructor injection ***
     // this.id = id;
     // this.computer = computer;
     // }
@@ -35,6 +44,8 @@ public class Developer {
         return computer;
     }
 
+    @Autowired // setter injection *** preferred ***
+    @Qualifier("laptop")
     public void setComputer(Computer computer) {
         this.computer = computer;
     }
