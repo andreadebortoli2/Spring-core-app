@@ -1,4 +1,4 @@
-package com.dba;
+package com.dba.model;
 
 import org.springframework.stereotype.Component;
 

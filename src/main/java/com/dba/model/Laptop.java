@@ -1,4 +1,4 @@
-package com.dba;
+package com.dba.model;
 
 // import org.springframework.context.annotation.Scope;
 // import org.springframework.context.annotation.Primary;

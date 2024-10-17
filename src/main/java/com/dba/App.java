@@ -5,6 +5,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 // import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.dba.config.AppConfig;
+import com.dba.model.Desktop;
+import com.dba.model.Developer;
+import com.dba.model.Laptop;
+import com.dba.service.LaptopService;
 
 /**
  * Hello world!
@@ -51,6 +55,11 @@ public class App {
         // Desktop desktop = context.getBean("com1",Desktop.class);
         desktop1.compile();
         // desktop2.compile();
+
+        LaptopService service = context.getBean(LaptopService.class);
+
+        Laptop laptop = context.getBean(Laptop.class);
+        service.addLaptop(laptop);
 
     }
 }
