@@ -24,10 +24,10 @@ public class App {
         System.out.println(dev2.getAge());
         dev2.code();
 
-        Laptop laptop1 = (Laptop) context.getBean("laptop");
+        Laptop laptop1 = (Laptop) context.getBean("computer");
         System.out.println(laptop1.ram);
 
-        Laptop laptop2 = (Laptop) context.getBean("laptop");
+        Laptop laptop2 = (Laptop) context.getBean("computer");
         System.out.println(laptop2.ram);
     }
 }

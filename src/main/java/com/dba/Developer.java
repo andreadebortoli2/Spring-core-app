@@ -6,17 +6,17 @@ public class Developer {
 
     private int age;
     // private Laptop laptop = new Laptop();
-    private Laptop laptop;
+    private Computer computer;
 
-    @ConstructorProperties({ "age", "laptop" })
-    public Developer(int age, Laptop laptop) {
-        this.age = age;
-        this.laptop = laptop;
-    }
+    // @ConstructorProperties({ "age", "computer" })
+    // public Developer(int age, Computer computer) {
+    // this.age = age;
+    // this.computer = computer;
+    // }
 
     public void code() {
-        laptop.compile();
         System.out.println("coding..");
+        computer.compile();
     }
 
     public int getAge() {
@@ -27,12 +27,12 @@ public class Developer {
         this.age = age;
     }
 
-    public Laptop getLaptop() {
-        return laptop;
+    public Computer getComputer() {
+        return computer;
     }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
+    public void setComputer(Computer computer) {
+        this.computer = computer;
     }
 
 }

@@ -1,11 +1,12 @@
 package com.dba;
 
-public class Laptop {
+public class Laptop implements Computer {
 
     public int ram;
 
+    @Override
     public void compile() {
-        System.out.println("compiling");
+        System.out.println("laptop compile");
     }
 
     public int getRam() {
