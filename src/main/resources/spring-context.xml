@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="developer" class="com.dba.Developer" scope="prototype">
+        <!-- <property name="age" value="3"/>
+        <property name="laptop" ref="laptop"/> -->
+        <!-- <constructor-arg index="1" ref="laptop"/>
+        <constructor-arg index="0" value="3"/> -->
+        <constructor-arg name="laptop" ref="laptop"/>
+        <constructor-arg name="age" value="3"/>
+    </bean>
+    
+    <bean id="laptop" class="com.dba.Laptop" scope="singleton">
+        <property name="ram" value="16"/>
+    </bean>
+
+</beans>
