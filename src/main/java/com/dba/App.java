@@ -15,19 +15,21 @@ public class App {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
 
         Developer dev1 = (Developer) context.getBean("developer");
-        dev1.setAge(5);
         ;
-        System.out.println(dev1.getAge());
+        System.out.println("Developer: " + dev1.getId());
         dev1.code();
 
         Developer dev2 = (Developer) context.getBean("developer");
-        System.out.println(dev2.getAge());
+        dev2.setId(2);
+        System.out.println("Developer: " + dev2.getId());
         dev2.code();
 
-        Laptop laptop1 = (Laptop) context.getBean("computer");
-        System.out.println(laptop1.ram);
+        // Laptop laptop1 = (Laptop) context.getBean("computer");
+        // System.out.println(laptop1.ram);
 
-        Laptop laptop2 = (Laptop) context.getBean("computer");
-        System.out.println(laptop2.ram);
+        // Laptop laptop2 = context.getBean("computer", Laptop.class);
+        // System.out.println(laptop2.ram);
+
+        Desktop desktop = context.getBean(Desktop.class);
     }
 }

@@ -6,18 +6,23 @@
     <!-- bean definitions here -->
 
     <bean id="developer" class="com.dba.Developer" scope="prototype" autowire="byType">
-        <property name="age" value="3"/>
+        <property name="id" value="1"/>
+        <property name="computer">
+            <bean id="computer" class="com.dba.Laptop" scope="singleton" primary="true">
+                <property name="ram" value="16"/>
+            </bean>
+        </property>
         <!-- <property name="laptop" ref="laptop"/> -->
         <!-- <constructor-arg index="1" ref="laptop"/>
-        <constructor-arg index="0" value="3"/> -->
+        <constructor-arg index="0" value="1"/> -->
         <!-- <constructor-arg name="computer" ref="laptop"/>
-        <constructor-arg name="age" value="3"/> -->
+        <constructor-arg name="id" value="1"/> -->
     </bean>
     
-    <bean id="computer" class="com.dba.Laptop" scope="singleton" primary="true">
+    <!-- <bean id="computer" class="com.dba.Laptop" scope="singleton" primary="true">
         <property name="ram" value="16"/>
-    </bean>
+    </bean> -->
 
-    <bean id="comptuer" class="com.dba.Desktop"></bean>
-
+    <bean id="comptuer" class="com.dba.Desktop" lazy-init="true"></bean>
+    
 </beans>

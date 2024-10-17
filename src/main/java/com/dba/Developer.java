@@ -1,30 +1,34 @@
 package com.dba;
 
-import java.beans.ConstructorProperties;
+// import java.beans.ConstructorProperties;
 
 public class Developer {
 
-    private int age;
+    private int id;
     // private Laptop laptop = new Laptop();
     private Computer computer;
 
-    // @ConstructorProperties({ "age", "computer" })
-    // public Developer(int age, Computer computer) {
-    // this.age = age;
+    // @ConstructorProperties({ "id", "computer" })
+    // public Developer(int id, Computer computer) {
+    // this.id = id;
     // this.computer = computer;
     // }
+
+    public Developer() {
+        System.out.println("Developer Object Created");
+    }
 
     public void code() {
         System.out.println("coding..");
         computer.compile();
     }
 
-    public int getAge() {
-        return age;
+    public int getId() {
+        return id;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Computer getComputer() {
