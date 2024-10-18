@@ -1,5 +1,8 @@
 package com.dba;
 
+import org.apache.catalina.Context;
+import org.apache.catalina.LifecycleException;
+import org.apache.catalina.startup.Tomcat;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 // import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -61,5 +64,21 @@ public class App {
         Laptop laptop = context.getBean(Laptop.class);
         service.addLaptop(laptop);
 
+        // SERVLET
+        System.out.println("------");
+        Tomcat tomcat = new Tomcat();
+        tomcat.setPort(8080); // optional
+
+        Context ctx = tomcat.addContext("", null);
+        Tomcat.addServlet(ctx, "hs", new HelloServlet());
+        ctx.addServletMappingDecoded("/hello", "hs");
+
+        try {
+            tomcat.start();
+            System.out.println("**servelt started**");
+            tomcat.getServer().await();
+        } catch (LifecycleException e) {
+            System.out.println("cannot start tomcat servlet");
+        }
     }
 }

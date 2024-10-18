@@ -8,6 +8,6 @@ import com.dba.model.Laptop;
 public class LaptopRepository {
 
     public void save(Laptop laptop) {
-        System.out.println("saved in database");
+        System.out.println("saved in database if connected");
     }
 }
