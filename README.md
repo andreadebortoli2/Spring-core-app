@@ -1,6 +1,6 @@
-# First app with Spring framework
+# Spring Framework App
 
-building an app with Spring from "scratch" to understand the power of the framework and of the Boot tool
+building an app with Spring from "scratch" to understand the power of the framework without the Boot tool
 
 #### PARTS:
 - framework configuration with .xml file
